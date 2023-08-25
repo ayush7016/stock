@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container{
+ background:white;
+  height: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.5rem;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  margin: 30px 0;
+}
+.arrow-g{
+  color: green;
+}
+.arrow-r{
+  color: red;
+}
+/*************************heading**************************/
+.heading{
+  width: 100%;
+  height: 3.5rem;
+  background:  rgba(128,128,128,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+ .heading a{
+  font-family: Georgia, serif;
+  text-decoration: none;
+  color: black;
+  display: inline;
+  font-size: 2.75rem;
+  word-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  max-width: 100%;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+/*************************Search**************************/
+.search-menu{
+  background:rgba(214, 214, 214);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+}
+.search {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.search-bar {
+  width: 100%;
+  height: 3.5rem; 
+  display: flex; 
+  padding: 0 1.5rem;
+  gap: 0.5rem;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.search-bar input {
+  flex: 1; 
+  height: 100%; 
+  padding: 0 1rem;
+  border: 1px solid grey;
+  background-color: rgb(174, 168, 168);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  margin-top:20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.search-bar input:focus {
+  background:  rgb(247, 241, 241);
+  outline: none;
+  box-shadow:5px rgb(143, 144, 128);
+}
+.search-bar button {
+  float: left;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: none;
+  background-color:grey;
+  cursor: pointer;
+  
+  }
+
+.search-bar button:hover {
+  background: darkgray;
+  box-shadow:5px black;
+}
+
+.search-bar button i {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.search-menu .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  padding: 0 1.5rem;
+  padding-bottom: 0.5rem;
+  
+}
+
+.search-bar ::placeholder{
+  color: black;
+}
+/*************************options**************************/
+.options button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 2rem;
+  height: 4rem;
+  letter-spacing: -1px;
+  background-color:   rgba(128,128,128);
+  border: none;
+  border-radius: 1rem;
+}
+
+.options .option-button:hover {
+  background: darkgrey;
+  cursor: pointer;
+  box-shadow: 5px black;
+}
+
+.option-button.active {
+  background: rgb(247, 241, 241);
+  box-shadow: 5px black;
+}
+/*************************Watchlist**************************/
+.watchlist-section{
+  background:rgb(214, 214, 214);
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0px 6px 2px rgb(214, 214, 214);
+
+}
+.watchlist-heading{
+  font-family: "Times New Roman", Times, serif;
+  height: 4rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:    rgba(128,128,128);
+  margin: 0.3rem 3rem;
+  margin-top: 1rem;
+  border-radius: 1.25rem;
+  color: rgba(0, 0, 0);
+}
+
+.watchlist-container {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.watchlist-container::-webkit-scrollbar {
+  display: none;
+}
+
+.watchlist-container .watchlist {
+  width: 95%;
+  list-style-type: none;
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background:   rgba(128,128,128);
+  margin: 0.5rem 0.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+.watchlist .symbol {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(0,0,0);
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.watchlist .price {
+  font-size: 1.75rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.watchlist .time {
+  background:lightgray;
+  font-size: 1.75rem;
+  height: 2.5rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 0.9rem;
+}
+
+.watchlist .close {
+  background: rgb(255, 0, 0);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-red {
+  background-color: rgb(255, 0, 0)
+}
+
+.bg-green {
+  background:  rgb(0, 249, 12);
+}
+
+.bg-white {
+  background: white;
+}
+/*************************modal**************************/
+.detailed-modal {
+  background:  rgba(128,128,128);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  height: 9rem;
+  padding: 0.25rem;
+  border-radius: 0.6rem;
+}
+
+.detailed-modal .detail-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22% 14% 14% 14% 14% 21%;
+}
+
+.detailed-modal .detail-list li {
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************responsive**************************/
+@media screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+  
+  #container {
+    width: 80%;
+    margin: 20px 0;
+  }
+  
+  .watchlist-container {
+    height: auto;
+    max-height: 50vh;
+  }
+  
+  .detailed-modal {
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-bar input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .search-bar button {
+    margin-top: 10px;
+  }
+  
+  .options .option-button {
+    font-size: 1.5rem;
+    height: 3.5rem;
+  }
+  
+  .watchlist .symbol {
+    font-size: 1.5rem;
+    margin-left: 0.25rem;
+  }
+  
+  .watchlist .price,
+  .watchlist .time {
+    font-size: 1.25rem;
+  }
+  
+  .watchlist .close {
+    font-size: 1.25rem;
+  }
+  
+  .detailed-modal .detail-list li {
+    font-size: 1rem;
+  }
+}

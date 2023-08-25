@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7d68c97d2f.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Stock Market Dashboard</title>
+  </head>
+  <body>
+    <main id="container">
+<!-- ***************************heading***************************** -->
+      <div class="heading">
+        <a href="#"><span class="arrow-g">↑</span> STOCK MARKET DASHBOARD <span class="arrow-r">↓</span> </a>
+      </div>
+<!-- ***********************search*************************** -->
+      <div class="search-menu">
+        <div class="search">
+          <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Search for Symbol...AMZN,MSFT,IBM" name="search-input" onchange="myFunction()"/>
+            <button type="search" id="search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <div class="options">
+          <button class="option-button" id="intraday" value="INTRADAY">
+            INTRADAY
+          </button>
+          <button class="option-button" id="daily" value="DAILY_ADJUSTED">
+            DAILY
+          </button>
+          <button class="option-button" id="weekly" value="WEEKLY">
+            WEEKLY
+          </button>
+          <button class="option-button" id="monthly" value="MONTHLY">
+            MONTHLY
+          </button>
+        </div>
+      </div>
+<!-- **************************watchlist***************************** -->
+      <div class="watchlist-section">
+        <div class="watchlist-heading">
+          <h3>YOUR WATCHLIST</h3>
+        </div>
+      <div class="watchlist-container" id="watchlist-container">
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
